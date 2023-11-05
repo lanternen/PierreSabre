@@ -41,6 +41,12 @@ public class Histoire {
 		roro.direBonjour();
 		roro.donner(marchand);
 		
+		
+		roro.provoquer(yakuza);
+		
+		
+		
+		
 	}
 
 }
