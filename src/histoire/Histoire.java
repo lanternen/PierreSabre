@@ -1,8 +1,11 @@
 package histoire;
 
-import personnage.Humain;
+/*import personnage.Humain;
 import personnage.Commercant;
 import personnage.Yakuza;
+import personnage.Ronin;*/
+
+import personnage.*;
 
 public class Histoire {
 
@@ -30,6 +33,13 @@ public class Histoire {
 		yakuza.parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
 		yakuza.parler(marchand.getNom() + ", si tu tiens à la vie donne moi ta bourse !");
 		yakuza.extorquer(marchand);	
+		
+		
+		
+		Ronin roro = new Ronin("Roro", "scochu", 60);
+		
+		roro.direBonjour();
+		roro.donner(marchand);
 		
 	}
 
