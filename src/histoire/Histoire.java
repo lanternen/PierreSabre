@@ -2,6 +2,7 @@ package histoire;
 
 import personnage.Humain;
 import personnage.Commercant;
+import personnage.Yakuza;
 
 public class Histoire {
 
@@ -15,13 +16,20 @@ public class Histoire {
 		prof.acheter("kimono", 50);
 		*/
 		
-		Commercant marchand = new Commercant("Marco", "th�", 20);
+		Commercant marchand = new Commercant("Marco", "th�", 20);
 		
 		marchand.direBonjour();
 		marchand.seFaireExtorquer();
 		marchand.recevoirArgent(15);
 		marchand.boire();
 		
+		
+		Yakuza yakuza = new Yakuza("Yaku le Noir", "Whiksy", 30, "Warsong");
+		
+		yakuza.direBonjour();
+		yakuza.parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
+		yakuza.parler(marchand.getNom() + ", si tu tiens à la vie donne moi ta bourse !");
+		yakuza.extorquer(marchand);	
 		
 	}
 

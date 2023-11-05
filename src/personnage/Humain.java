@@ -25,7 +25,7 @@ public class Humain {
 	}
 
 	public void parler(String texte) {
-		System.out.println("<< " + texte + " >>");
+		System.out.println("(" + getNom() + ") - " + " " + texte + " ");
 	}
 
 	public void direBonjour() {
@@ -46,11 +46,11 @@ public class Humain {
 
 	public void acheter(String bien, int prix) {
 		if (prix <= argent) {
-			parler("j'ai " + getArgent() + "sous en poche." + "Je vais pouvoir m'offrir un "+ bien +" à " + prix +" sous.");
+			parler("j'ai " + getArgent() + "sous en poche." + "Je vais pouvoir m'offrir un "+ bien +" ï¿½ " + prix +" sous.");
 			perdreArgent(prix);
 		}
 		else {
-			parler("Je n'ai plus que " + getArgent() + "sous en poche. " + "Je ne peux meme pas m'offrir un " + bien +" à " + prix+ "sous.");
+			parler("Je n'ai plus que " + getArgent() + "sous en poche. " + "Je ne peux meme pas m'offrir un " + bien +" ï¿½ " + prix+ "sous.");
 		}
 	}
 
