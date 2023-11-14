@@ -8,9 +8,13 @@ public class Humain {
 		this.argent = argent;
 	}
 
+	final int taille = 30;
+	
 	private String nom;
 	private String boissonFav;
 	private int argent;
+	protected int nbConnaissances;
+	protected String listeConnaissances[] = new String[taille];
 
 	public String getNom() {
 		return nom;
@@ -54,4 +58,46 @@ public class Humain {
 		}
 	}
 
+	
+	private void memoriser(Humain humain) {
+		if (nbConnaissances == taille) {
+			for (int i = 0; i<taille -1; i++)
+			{
+				listeConnaissances[i] = listeConnaissances[i+1];
+			}
+			nbConnaissances -= 1;
+		}
+		
+		listeConnaissances[nbConnaissances] = humain.getNom();
+		nbConnaissances += 1;
+	}
+	
+	private void repondre(Humain humain) {
+		direBonjour();
+		memoriser(humain);
+	}
+	
+	public void faireConnaissanceAvec(Humain autreHumain) {
+		
+		direBonjour();
+		autreHumain.repondre(this);
+		memoriser(autreHumain);
+		
+	}
+	
+	public void listerConnaissance() {
+		System.out.print("Je connais beaucoup de monde dont : ");
+		for (int i = 0; i <nbConnaissances; i++) {
+			System.out.print(listeConnaissances[i]);
+			
+			if (i < nbConnaissances -1) {
+				System.out.print(", ");
+			}
+			else {
+				System.out.println(".");
+			}
+		}
+	}
+	
+	
 }

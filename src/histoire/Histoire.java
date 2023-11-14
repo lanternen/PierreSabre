@@ -19,7 +19,7 @@ public class Histoire {
 		prof.acheter("kimono", 50);
 		*/
 		
-		Commercant marchand = new Commercant("Marco", "th�", 20);
+		Commercant marchand = new Commercant("Marco", 20);
 		
 		marchand.direBonjour();
 		marchand.seFaireExtorquer();

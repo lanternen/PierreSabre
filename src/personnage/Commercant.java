@@ -3,10 +3,14 @@ import personnage.Humain;
 
 public class Commercant extends Humain {
 	
-	public Commercant(String nom, String boissonFav, int argent) {
+	static String boissonFav = "thé";
+	
+	public Commercant(String nom, int argent) {
 		super(nom, boissonFav, argent);
 		
 	}
+	
+	
 
 	public int seFaireExtorquer() {
 		int vol = getArgent();
@@ -17,7 +21,7 @@ public class Commercant extends Humain {
 	
 	public void recevoirArgent(int argent) {
 		gagnerArgent(argent);
-		parler(argent + " sous. Je te remercie gï¿½nï¿½reux donateur !");
+		parler(argent + " sous. Je te remercie généreux donateur !");
 	}
 	
 	
