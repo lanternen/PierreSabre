@@ -86,17 +86,24 @@ public class Humain {
 	}
 	
 	public void listerConnaissance() {
-		System.out.print("Je connais beaucoup de monde dont : ");
-		for (int i = 0; i <nbConnaissances; i++) {
-			System.out.print(listeConnaissances[i]);
-			
-			if (i < nbConnaissances -1) {
-				System.out.print(", ");
-			}
-			else {
-				System.out.println(".");
-			}
+		
+		String connaissances = "";
+		
+		for (int i = 0; i<nbConnaissances; i++) {
+			connaissances += listeConnaissances[i];
 		}
+		
+		parler("Je connais beaucoup de monde dont : " + connaissances + ".");
+//		for (int i = 0; i <nbConnaissances; i++) {
+//			System.out.print(listeConnaissances[i]);
+//			
+//			if (i < nbConnaissances -1) {
+//				System.out.print(", ");
+//			}
+//			else {
+//				System.out.println(".");
+//			}
+//		}
 	}
 	
 	
