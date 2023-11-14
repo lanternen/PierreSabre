@@ -39,6 +39,16 @@ public class Yakuza extends Humain {
 		parler("J'ai perdu mon duel et mes " + getArgent() + " sous, snif... J'ai déshonoré le clan de " + clan);
 		return getArgent();
 	}
+
+
+	@Override
+	public void direBonjour() {
+		// TODO Auto-generated method stub
+		super.direBonjour();
+		parler("Mon clan est celui de " + clan + ".");
+	}
+	
+	
 	
 	
 }
